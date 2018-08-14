@@ -1,4 +1,3 @@
-
 package modelado.cadenas;
 
 public class Cadena {

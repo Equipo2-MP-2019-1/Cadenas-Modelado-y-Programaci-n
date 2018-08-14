@@ -1,8 +1,3 @@
-/*
- * Código utilizado para el curso de Estructuras de Datos.
- * Se permite consultarlo para fines didácticos en forma personal.
- */
-
 package modelado.cadenas;
 
 import org.junit.AfterClass;
@@ -12,17 +7,22 @@ import static org.junit.Assert.*;
 
 import java.util.Random;
 
-/**
- * Batería de pruebas unitarias para la clase <code>Vector</code>.
- * @author veronica
- */
 public class CadenaTest {
+    public CadenaTest() {}
 
-    private Random intGenerator;
-    private static float mark;
-
-    public CadenaTest() {
-        intGenerator = new Random();
+    public testRepetidos(){
+        Cadena cadena = new Cadena();
+        System.out.println("Probando metodo para repetidos");
+        String str = "hoooola";
+        String cadena_correcta = "hola";
+        Assert.assertTrue(cadena_correcta == cadena.repetidos(str,o));
+        Assert.assertTrue(cadena_correcta == cadena.repetidos(str,a));
+        str = "huee   huuue";
+        cadena_correcta = "huehue";
+        Assert.assertFalse(cadena.repetidos(str,e).matches("\\s+"));
+        Assert.assertTrue(cadena.repetidos(str,u) == cadena_correcta);
+        mark += 1;
+        System.out.println("Repetidos funciona correctamente");
     }
 
 }
