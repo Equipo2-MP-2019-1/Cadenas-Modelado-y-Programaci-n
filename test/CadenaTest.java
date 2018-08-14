@@ -11,23 +11,9 @@ public class CadenaTest {
     private Cadena cadena;
 	
     public CadenaTest() {
-
-        cadena = new Cadena();
     }
 
     
-    
-    public testPalindromo(){
-	String palindromo = "anitalavalatina";
-	Assert.assertTrue(cadena.palindromo(palindromo));
-	
-	palindromo = "Anitalavalatina";
-	Assert.assertFalse(cadena.palindromo(palindromo));
-
-	palindromo = " anitalavalatina";
-	Assert.assertFalse(cadena.palindromo(palindromo));
-
-    }
 
     @BeforeClass
     public static void setUpClass() {
@@ -53,6 +39,20 @@ public class CadenaTest {
         assertTrue(cadena.quitaEspacios("  Ho  la  ").equals("Hola"));
         mark += 1;
         System.out.println("Quita espacios funciona correctamente");
+
+    }
+
+     @Test
+     public testPalindromo(){
+	 Cadena cadena = new Cadena();
+	 String palindromo = "anitalavalatina";
+	 assertTrue(cadena.palindromo(palindromo));
+	 
+	 palindromo = "Anitalavalatina";
+	 assertFalse(cadena.palindromo(palindromo));
+	 
+	 palindromo = " anitalavalatina";
+	 assertFalse(cadena.palindromo(palindromo));
 
     }
 
