@@ -1,7 +1,6 @@
 package modelado.cadenas;
 
 public class Cadena {
-
     public String concatenacion(String s1, String s2){
         return "";
     }
