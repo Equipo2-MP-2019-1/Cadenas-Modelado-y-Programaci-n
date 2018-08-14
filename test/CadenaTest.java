@@ -9,27 +9,6 @@ import java.util.Random;
 public class CadenaTest {
     public CadenaTest() {}
 
-<<<<<<< HEAD
-    public testRepetidos(){
-        Cadena cadena = new Cadena();
-        System.out.println("Probando metodo para repetidos");
-        String str = "hoooola";
-        String cadena_correcta = "hola";
-        Assert.assertTrue(cadena_correcta == cadena.repetidos(str,o));
-        Assert.assertTrue(cadena_correcta == cadena.repetidos(str,a));
-        str = "huee   huuue";
-        cadena_correcta = "huehue";
-        Assert.assertFalse(cadena.repetidos(str,e).matches("\\s+"));
-        Assert.assertTrue(cadena.repetidos(str,u) == cadena_correcta);
-        mark += 1;
-        System.out.println("Repetidos funciona correctamente");
-=======
-    private Random intGenerator;
-    private static float mark;
-
-    public CadenaTest() {
-    }
-
     @BeforeClass
     public static void setUpClass() {
         mark = 0;
@@ -54,7 +33,21 @@ public class CadenaTest {
         assertTrue(cadena.quitaEspacios("  Ho  la  ").equals("Hola"));
         mark += 1;
         System.out.println("Quita espacios funciona correctamente");
->>>>>>> 0da08337d4bb1afa5c6bf3d867e9a9421602ac03
+    }
+
+    public testRepetidos(){
+        Cadena cadena = new Cadena();
+        System.out.println("Probando metodo para repetidos");
+        String str = "hoooola";
+        String cadena_correcta = "hola";
+        Assert.assertTrue(cadena_correcta == cadena.repetidos(str,o));
+        Assert.assertTrue(cadena_correcta == cadena.repetidos(str,a));
+        str = "huee   huuue";
+        cadena_correcta = "huehue";
+        Assert.assertFalse(cadena.repetidos(str,e).matches("\\s+"));
+        Assert.assertTrue(cadena.repetidos(str,u) == cadena_correcta);
+        mark += 1;
+        System.out.println("Repetidos funciona correctamente");
     }
 
 }
