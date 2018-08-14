@@ -7,7 +7,10 @@ import static org.junit.Assert.*;
 import java.util.Random;
 
 public class CadenaTest {
+
     public CadenaTest() {}
+
+    
 
     @BeforeClass
     public static void setUpClass() {
@@ -33,6 +36,21 @@ public class CadenaTest {
         assertTrue(cadena.quitaEspacios("  Ho  la  ").equals("Hola"));
         mark += 1;
         System.out.println("Quita espacios funciona correctamente");
+
+    }
+
+     @Test
+     public testPalindromo(){
+	 Cadena cadena = new Cadena();
+	 String palindromo = "anitalavalatina";
+	 assertTrue(cadena.palindromo(palindromo));
+	 
+	 palindromo = "Anitalavalatina";
+	 assertFalse(cadena.palindromo(palindromo));
+	 
+	 palindromo = " anitalavalatina";
+	 assertFalse(cadena.palindromo(palindromo));
+
     }
 
     public testRepetidos(){
