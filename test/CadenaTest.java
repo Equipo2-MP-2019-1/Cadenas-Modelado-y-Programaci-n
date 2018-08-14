@@ -18,11 +18,23 @@ import java.util.Random;
  */
 public class CadenaTest {
 
-    private Random intGenerator;
-    private static float mark;
-
+    private Cadena cadena;
+	
     public CadenaTest() {
-        intGenerator = new Random();
+        cadena = new Cadena();
+    }
+
+    
+    
+    public testPalindromo(){
+	String palindromo = "anitalavalatina";
+	Assert.assertTrue(cadena.palindromo(palindromo));
+	
+	palindromo = "Anitalavalatina";
+	Assert.assertFalse(cadena.palindromo(palindromo));
+
+	palindromo = " anitalavalatina";
+	Assert.assertFalse(cadena.palindromo(palindromo));
     }
 
 }
